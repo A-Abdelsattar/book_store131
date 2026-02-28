@@ -1,3 +1,4 @@
+import 'package:booksotre/core/routes/routes.dart';
 import 'package:booksotre/core/widgets/app_button.dart';
 import 'package:booksotre/gen/translations/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -53,11 +54,18 @@ class WelcomeScreen extends StatelessWidget {
 
             AppButton(
               title: LocaleKeys.login.tr(),
+              onTap: (){
+                Navigator.pushNamed(context, Routes.loginScreen);
+              },
             ),
             SizedBox(height: 15.h,),
             AppButton(
               title: LocaleKeys.register.tr(),
               backgroundColor:Colors.white,
+              onTap: (){
+                Navigator.pushNamed(context, Routes.registerScreen);
+
+              },
             ),
             SizedBox(height: 94.h,)
 
